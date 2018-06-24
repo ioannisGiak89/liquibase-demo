@@ -1,0 +1,20 @@
+databaseChangeLog:
+    - changeSet:
+          id: 1
+          author: nvoxland
+          changes:
+              - insert:
+                  tableName: test
+                  columns:
+                      - column:
+                          name: code
+                          type: varchar(255)
+                          value: 1234
+                      - column:
+                          name: status
+                          type: varchar(255)
+                          value: 1234
+                      - column:
+                          name: desc
+                          type: varchar(255)
+                          value: 1234
