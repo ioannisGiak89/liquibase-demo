@@ -5,13 +5,14 @@
         xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
-    <changeSet author="liquibase-docs" id="insert-example">
-        <insert schemaName="public"
-                tableName="test">
-            <column name="code" type="varchar(255)" value="123"/>
-            <column name="desc" type="varchar(255)" value="123"/>
-            <column name="status" type="varchar(255)" value="123"/>
+    <changeSet author="ig657" id="insert-book-1">
+        <insert schemaName="liquibase_demo"
+                tableName="book">
+            <column name="id" type="bigint" value="1"/>
+            <column name="title" type="varchar(255)" value="Clean Code"/>
+            <column name="author" type="varchar(255)" value="Robert Cecil Martin"/>
+            <column name="barcode" type="varchar(255)" value="0928373"/>
+            <column name="author_id" type="integer" value="123"/>
         </insert>
     </changeSet>
 </databaseChangeLog>
-
