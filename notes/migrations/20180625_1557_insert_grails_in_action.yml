@@ -1,0 +1,28 @@
+databaseChangeLog:
+    - changeSet:
+          id: 2
+          author: ig657
+          changes:
+              - insert:
+                  tableName: book
+                  columns:
+                      - column:
+                          name: id
+                          type: bigint
+                          value: 2
+                      - column:
+                          name: title
+                          type: varchar(255)
+                          value: Grails In Action
+                      - column:
+                          name: author
+                          type: varchar(255)
+                          value: Peter Ledbrook
+                      - column:
+                          name: barcode
+                          type: varchar(255)
+                          value: 123123123
+                      - column:
+                          name: author_id
+                          type: integer
+                          value: 987
