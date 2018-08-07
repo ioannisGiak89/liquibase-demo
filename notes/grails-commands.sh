@@ -8,3 +8,4 @@ grails dbm-update --dataSource=migrations
 
 # Generate diff
 grails dbm-gorm-diff <filename> --defaultSchema=liquibase_demo --add
+

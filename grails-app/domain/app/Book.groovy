@@ -14,7 +14,7 @@ class Book {
 
     static constraints = {
         barcode unique: true
-        analysisCode nullable: true
+        publisher nullable: true
         id generator: 'sequence', params: [sequence: 'book_id']
     }
 }
