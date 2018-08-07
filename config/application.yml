@@ -1,0 +1,35 @@
+grails:
+  plugin:
+    databasemigration:
+      migrations:
+        updateOnStartDefaultSchema: liquibase_demo
+        updateOnStart: false
+        updateOnStartFileName: changelog.groovy
+        changelogFileName: changelog.groovy
+
+environments:
+  development:
+    dataSources:
+      dataSource:
+        username: app_liquibase_demo_1
+        password: demo2
+        driverClassName: org.postgresql.Driver
+        dbCreate: none
+        url: jdbc:postgresql://db.docker:5432/liquibase_demo
+        initialize: false
+        pooled: true
+        jmxExport: true
+#        logSql: true
+      migrations:
+        username: liquibase_demo
+        password: demo
+        dbCreate: none
+        url: jdbc:postgresql://db.docker:5432/liquibase_demo
+        driverClassName: org.postgresql.Driver
+        initialize: false
+        pooled: true
+        jmxExport: true
+
+    hibernate:
+        dialect: net.kaleidos.hibernate.PostgresqlExtensionsDialect
+        default_schema: liquibase_demo
